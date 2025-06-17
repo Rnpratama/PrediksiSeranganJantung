@@ -26,15 +26,13 @@ with st.form("heart_form"):
 
     submitted = st.form_submit_button("Prediksi")
 
-# Prediksi
 if submitted:
     features = np.array([[age, sex, cp, trestbps, chol, fbs, restecg,
                           thalach, exang, oldpeak, slope, ca, thal]])
     scaled_features = scaler.transform(features)
     result = model.predict(scaled_features)[0]
 
-    st.subheader("Hasil Prediksi:")
     if result == 1:
-        st.error(" Berisiko Terkena Penyakit Jantung")
+        st.error("⚠️ Berisiko Terkena Penyakit Jantung")
     else:
-        st.success(" Tidak Berisiko Penyakit Jantung")
+        st.success("✅ Tidak Berisiko Penyakit Jantung")
