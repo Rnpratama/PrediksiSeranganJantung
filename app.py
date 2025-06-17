@@ -6,7 +6,7 @@ import joblib
 model = joblib.load("heart_model.pkl")
 scaler = joblib.load("scaler.pkl")
 
-st.title("🔎 Prediksi Risiko Penyakit Jantung")
+st.title(" Prediksi Risiko Penyakit Jantung")
 st.markdown("Masukkan data pasien di bawah ini untuk memprediksi apakah berisiko terkena penyakit jantung atau tidak.")
 
 # Form input
